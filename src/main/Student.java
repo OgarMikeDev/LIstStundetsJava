@@ -78,7 +78,7 @@ public class Student {
             if (student.getPhoneNumber() == phoneNumber) {
                 String name = student.getName();
                 studentIterator.remove();
-                System.out.println("Remove client: \"" + name + "\"");
+                System.out.println("Removed client: \"" + name + "\"");
             }
         }
     }
