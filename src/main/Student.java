@@ -74,8 +74,8 @@ public class Student {
     }
 
     public static int getCountStudents() {
-        //Seva
-        return 0;
+
+        return setStudents.size();
     }
 
     @Override
