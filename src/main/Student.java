@@ -71,6 +71,16 @@ public class Student {
 
     public static void removeStudent(long phoneNumber) {
         //Vadim
+        Iterator<Student> studentIterator = setStudents.iterator();
+
+        while (studentIterator.hasNext()) {
+            Student student = studentIterator.next();
+            if (student.getPhoneNumber() == phoneNumber) {
+                String name = student.getName();
+                studentIterator.remove();
+                System.out.println("Remove client: \"" + name + "\"");
+            }
+        }
     }
 
     public static int getCountStudents() {
