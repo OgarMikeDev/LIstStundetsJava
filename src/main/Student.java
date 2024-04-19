@@ -71,15 +71,28 @@ public class Student implements Comparable<Student> {
 
     public static void printInformationAboutStudents() {
         //Alexandr
+        for (Student currentStudent : setStudents) {
+            System.out.println(currentStudent);
+        }
     }
 
     public static void removeStudent(long phoneNumber) {
         //Vadim
+        Iterator<Student> studentIterator = setStudents.iterator();
+
+        while (studentIterator.hasNext()) {
+            Student student = studentIterator.next();
+            if (student.getPhoneNumber() == phoneNumber) {
+                String name = student.getName();
+                studentIterator.remove();
+                System.out.println("Removed client: \"" + name + "\"");
+            }
+        }
     }
 
     public static int getCountStudents() {
         //Seva
-        return 0;
+        return setStudents.size();
     }
 
     @Override
