@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Student implements Comparable<Student> {
     private static int count = 0;
-    private String name; //Mike
+    private String name; //Misha
     private int age; //23
     private String email; //mura.m.v@email.ru
     private long phoneNumber; //89676400941
